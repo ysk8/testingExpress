@@ -19,10 +19,12 @@ function onDocumentReady()
         
     $("#nav1").offset({left:200, top:100});
     
-    x=$("#content").offset().left;
-    y=$("#content").offset().top;
+    x=$("#nav1").offset().left;
+    y=$("#nav1").offset().top;
     
     console.log("x = "+x+" y = "+y);
+    
+    $("#calendarioApp").offset({left:x, top:y+80});
     
 }
 
