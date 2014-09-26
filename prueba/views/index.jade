@@ -1,0 +1,17 @@
+extends layout
+
+block content
+ include header
+ content(id="content")
+  nav
+   ul.nav
+    li
+     a(class="icon-location", id="addMarker", href="#")
+    li
+     a(id="favoritos", href="#") F
+    li
+     a(id="autos", href="#") A
+    
+  include menu_app
+  
+  include calendario
