@@ -43,6 +43,7 @@ content
     position: absolute;
 }
 
+
 .header
 {
     background-color: #2679a5;
@@ -281,21 +282,6 @@ content
 {
     margin-bottom: 0;
 }
-/*
-.nav a:before {
-  content: "";
-  display: block;
-  background: #fff;
-  border-top: 2px solid #ddd;
-  position: absolute;
-  top: -18px;
-  left: -18px;
-  bottom: -18px;
-  right: -18px;
-  z-index: -1;
-  border-radius: 50%;
-  box-shadow: inset 0px 8px 48px #ddd;
-}*/
 
 .nav2 a:active {
   box-shadow: 0px 3px 4px #aaa inset, 0px 2px 3px #fff;
@@ -312,50 +298,38 @@ content
     font-size: 14px;
 }
 
-/*#calendario
-{
-    display: none;
-}
 
-#hora
+.hora
 {
-    display: none;
-}
-*/
-
-/*
-relative
-{
-    position: relative;
-}
-
-a {
-    color: #00f2ff;
-    font-size: 21px;
-}
-
-li
-{
-    list-style: none;
-    position: relative;
-    width: 60px;
-    height: 60px;
-    background-color: #8c8c8c;
+    background-color: #e2e2e2;
+    font-size: 32px;
+    padding: 5px 0 1px 1px;
+    border-radius: 10px;
+    width: 200px;
     
 }
 
-section 
+.hora select
 {
+    background-color: #f7f7f7;
+    font-size: 32px;
+    color: #2679a5;
+    border: solid 1px transparent;
+    margin: 0 0 5px 5px;
+    -webkit-appearance: none;
+    width: 60px;
+    text-align: center;
+    padding-left: 15px;
     position: relative;
 }
 
-nav a
+#minuto_selector
 {
-    text-decoration: none;
-    position: absolute;
-    top: 50%;
-    height: 60px;
-    margin-top: -18px;
-    text-align: center;
+    padding-left: 10px;
 }
-*/
+
+#am_pm
+{
+    padding-left: 7px;
+}
+

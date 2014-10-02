@@ -7,7 +7,7 @@
 */
 function onDocumentReady()
 {
-	console.log("Main Ready! -> 1");
+	console.log("Main Ready! -> 1.0.0");
     
     /*$("#hora").attr("disable", true);
     
@@ -21,7 +21,7 @@ function onDocumentReady()
     
     $("#nav1").hide();
     $("#calendarioApp").hide();       
-    
+    $("#tiempo").hide();
     
     $("#addMarker").on('click', function(e)
     {
@@ -33,7 +33,7 @@ function onDocumentReady()
                          
     });
     
-    $("#calendario").on('click', function(e)
+    $("#calendario_btn").on('click', function(e)
     {
         $("#calendarioApp").show();
         
@@ -47,6 +47,21 @@ function onDocumentReady()
         console.log("Muestro los Dias!")
                          
     });
+    
+    $(".calendario").on('click', function(e)
+    {
+        $("#calendarioApp").hide();
+        
+        $("#tiempo").show();
+        
+        x=$("#nav1").offset().left;
+        y=$("#nav1").offset().top;
+    
+        console.log("x = "+x+" y = "+y);
+    
+        $("#tiempo").offset({left:x+5, top:y+80});
+        
+    });    
     
 }
 
