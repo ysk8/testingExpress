@@ -24,6 +24,18 @@ function onDocumentReady()
     $("#tiempo").hide();
     $("#ok_button").hide();
     $("#auto_app").hide();
+    $("#destino_app").hide();
+    $("#pago_app").hide();
+    
+    function posicionReferencia(instancia, vx, vy)
+    {
+        x=$("#nav1").offset().left;
+        y=$("#nav1").offset().top;
+        
+        console.log("X = "+x+" Y = "+y);
+        
+        $(instancia).offset({left:x+vx, top:y+vy});
+    }
     
     $("#addMarker").on('click', function(e)
     {
@@ -39,14 +51,7 @@ function onDocumentReady()
     {
         $("#calendarioApp").show();
         
-        x=$("#nav1").offset().left;
-        y=$("#nav1").offset().top;
-    
-        console.log("x = "+x+" y = "+y);
-    
-        $("#calendarioApp").offset({left:x, top:y+80});
-        
-        console.log("Muestro los Dias!")
+        posicionReferencia("#calendarioApp", 0, 80);        
                          
     });
     
@@ -57,13 +62,8 @@ function onDocumentReady()
         $("#tiempo").show();
         $("#ok_button").show();
         
-        x=$("#nav1").offset().left;
-        y=$("#nav1").offset().top;
-    
-        console.log("x = "+x+" y = "+y);
-    
-        $("#tiempo").offset({left:x+5, top:y+80});
-        $("#ok_button").offset({left:x+70, top:y+135});
+        posicionReferencia("#tiempo", 5, 80);
+        posicionReferencia("#ok_button", 70, 135);
         
     });
     
@@ -76,17 +76,30 @@ function onDocumentReady()
         
         $("#auto_app").show();
         
-         x=$("#nav1").offset().left;
-         y=$("#nav1").offset().top;
-        
-        console.log("x = "+x+" y = "+y);
-    
-        $("#auto_app").offset({left:x+65, top:y+80});
+        posicionReferencia("#auto_app", 65, 80);
     });
     
     $(".autosApp").on('click', function(e)
     {
-        console.log("Placa: "+$(this).text());        
+        console.log("Placa: "+$(this).text());
+        
+        $("#auto_app").hide();
+        
+        $("#destino_app").show();
+        
+        posicionReferencia("#destino_app", 125, 80);       
+        
+    });
+    
+    $(".destinosApp").on('click', function(e)
+    {
+        console.log("Destino: "+$(this).text());
+        
+        $("#destino_app").hide();
+        
+        $("#pago_app").show();
+        
+        posicionReferencia("#pago_app", 185, 80);       
         
     });
     

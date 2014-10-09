@@ -5,7 +5,9 @@ var router = express.Router();
 router.get('/', function(req, res) {
     res.render('index', { title: 'Te Llevo', 
                          fecha: 10, 
-                         autos: ["ABC 589", "FRG 492"] });
+                         autos: ["ABC 589", "FRG 492"],
+                         destinos:["Casa 1", "Apto 1", "Hotel 1"]
+                        });
 });
 
 module.exports = router;

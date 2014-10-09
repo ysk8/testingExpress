@@ -346,7 +346,8 @@ content
     
 }
 
-.okButton a:link, .okButton a:visited
+.okButton a:link, 
+.okButton a:visited
 {
   display: block;
   text-decoration: none;
@@ -374,7 +375,9 @@ content
   background: #f5f5f5;
 }
 
-.navAuto
+.navAuto,
+.navDestino,
+.navPago
 {
     list-style: none;
     text-align:left;
@@ -386,7 +389,12 @@ content
     position: relative;
 }
 
-.navAuto a:link, .navAuto a:visited
+.navAuto a:link,
+.navAuto a:visited,
+.navDestino a:link,
+.navDestino a:visited,
+.navPago a:link,
+.navPago a:visited
 {
    display: block;
   text-decoration: none;
@@ -404,12 +412,16 @@ content
   margin: 0 5px 5px 5px; 
 }
 
-.navAuto a:active
+.navAuto a:active,
+.navDestino a:active,
+.navPago a:active
 {
     box-shadow: 0px 3px 4px #aaa inset, 0px 2px 3px #fff;        
 }
 
-.navAuto a:hover
+.navAuto a:hover,
+.navDestino a:hover,
+.navPago a:hover
 {
     text-decoration: none;
     color: #555;
