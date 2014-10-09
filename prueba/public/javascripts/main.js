@@ -7,7 +7,7 @@
 */
 function onDocumentReady()
 {
-	console.log("Main Ready! -> 1.0.0");
+	console.log("Main Ready! -> 0.2.0");
     
     /*$("#hora").attr("disable", true);
     
@@ -22,6 +22,7 @@ function onDocumentReady()
     $("#nav1").hide();
     $("#calendarioApp").hide();       
     $("#tiempo").hide();
+    $("#ok_button").hide();
     
     $("#addMarker").on('click', function(e)
     {
@@ -53,6 +54,7 @@ function onDocumentReady()
         $("#calendarioApp").hide();
         
         $("#tiempo").show();
+        $("#ok_button").show();
         
         x=$("#nav1").offset().left;
         y=$("#nav1").offset().top;
@@ -60,8 +62,14 @@ function onDocumentReady()
         console.log("x = "+x+" y = "+y);
     
         $("#tiempo").offset({left:x+5, top:y+80});
+        $("#ok_button").offset({left:x+70, top:y+135});
         
-    });    
+    });
+    
+    $(".okButton").on('click', function(e)
+    {
+        console.log("Boton OK");
+    });
     
 }
 

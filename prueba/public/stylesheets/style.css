@@ -264,7 +264,7 @@ content
   background-image: -o-linear-gradient(top, #f7f7f7, #e7e7e7);*/ 
   color: #2679a5;
   margin: 0px;
-  width: 60px;
+  width: 62.5px;
   height: 45px;
   position: relative;
   text-align: center;
@@ -333,3 +333,43 @@ content
     padding-left: 7px;
 }
 
+.okButton
+{
+    list-style: none;
+    text-align:left;
+    font-size: 32px;
+    background-color: #e2e2e2; 
+    padding: 5px 1px 1px 1px;
+    width: 70px;
+    border-radius: 10px;
+    position: relative;
+    
+}
+
+.okButton a:link, .okButton a:visited
+{
+  display: block;
+  text-decoration: none;
+  background-color: #f7f7f7;
+  color: #2679a5;
+  margin: 0px;
+  /*width: 62.5px;*/
+  height: 60px;
+  position: relative;
+  text-align: center;
+  line-height: 60px;
+  border-radius: 5px;  
+  /*box-shadow: 0px 3px 8px #aaa, inset 0px 2px 3px #fff;*/
+  border: solid 1px transparent;
+  margin: 0 5px 5px 5px;
+}
+
+.okButton a:active {
+  box-shadow: 0px 3px 4px #aaa inset, 0px 2px 3px #fff;
+}
+
+.okButton a:hover {
+  text-decoration: none;
+  color: #555;
+  background: #f5f5f5;
+}
