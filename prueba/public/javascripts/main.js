@@ -23,6 +23,7 @@ function onDocumentReady()
     $("#calendarioApp").hide();       
     $("#tiempo").hide();
     $("#ok_button").hide();
+    $("#auto_app").hide();
     
     $("#addMarker").on('click', function(e)
     {
@@ -69,6 +70,24 @@ function onDocumentReady()
     $(".okButton").on('click', function(e)
     {
         console.log("Boton OK");
+        
+        $("#tiempo").hide();
+        $("#ok_button").hide();
+        
+        $("#auto_app").show();
+        
+         x=$("#nav1").offset().left;
+         y=$("#nav1").offset().top;
+        
+        console.log("x = "+x+" y = "+y);
+    
+        $("#auto_app").offset({left:x+65, top:y+80});
+    });
+    
+    $(".autosApp").on('click', function(e)
+    {
+        console.log("Placa: "+$(this).text());        
+        
     });
     
 }
