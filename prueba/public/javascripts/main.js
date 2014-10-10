@@ -29,7 +29,7 @@ function onDocumentReady()
     $("#servicio_app").hide();
     $("#solicitar_servicio_button").hide();
     
-    function posicionReferencia(instancia, vx, vy)
+    function posicionReferencia(instancia, vx, vy, i)
     {
         x=$("#nav1").offset().left;
         y=$("#nav1").offset().top;
@@ -37,6 +37,8 @@ function onDocumentReady()
         console.log("X = "+x+" Y = "+y);
         
         $(instancia).offset({left:x+vx, top:y+vy});
+        
+        $("#indicador_t").offset({left:x+i});
     }
     
     $("#addMarker").on('click', function(e)
@@ -53,7 +55,7 @@ function onDocumentReady()
     {
         $("#calendarioApp").show();
         
-        posicionReferencia("#calendarioApp", 0, 80);        
+        posicionReferencia("#calendarioApp", 0, 87, 0);        
                          
     });
     
@@ -68,8 +70,8 @@ function onDocumentReady()
         $("#tiempo").show();
         $("#ok_button").show();
         
-        posicionReferencia("#tiempo", 5, 80);
-        posicionReferencia("#ok_button", 70, 135);
+        posicionReferencia("#tiempo", 5, 87, 70);
+        posicionReferencia("#ok_button", 70, 142, 70);       
         
     });
     
@@ -86,7 +88,7 @@ function onDocumentReady()
         
         $("#auto_app").show();
         
-        posicionReferencia("#auto_app", 65, 80);
+        posicionReferencia("#auto_app", 65, 87, 140);
     });
     
     $(".autosApp").on('click', function(e)
@@ -99,7 +101,7 @@ function onDocumentReady()
         
         $("#destino_app").show();
         
-        posicionReferencia("#destino_app", 125, 80);       
+        posicionReferencia("#destino_app", 125, 87, 210);       
         
     });
     
@@ -113,7 +115,7 @@ function onDocumentReady()
         
         $("#pago_app").show();
         
-        posicionReferencia("#pago_app", 185, 80);       
+        posicionReferencia("#pago_app", 185, 87, 280);       
         
     });
     
@@ -156,8 +158,8 @@ function onDocumentReady()
         });
         
                 
-        posicionReferencia("#servicio_app", 255, 80);
-        posicionReferencia("#solicitar_servicio_button", 490, 90);
+        posicionReferencia("#servicio_app", 255, 87, 350);
+        posicionReferencia("#solicitar_servicio_button", 490, 90, 350);
         
     });
 }

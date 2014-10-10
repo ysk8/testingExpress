@@ -1,10 +1,10 @@
 @font-face {
 	font-family: 'icomoon';
-	src:url('../fonts/icomoon.eot?yfseq');
-	src:url('../fonts/icomoon.eot?#iefixyfseq') format('embedded-opentype'),
-		url('../fonts/icomoon.woff?yfseq') format('woff'),
-		url('../fonts/icomoon.ttf?yfseq') format('truetype'),
-		url('../fonts/icomoon.svg?yfseq#icomoon') format('svg');
+	src:url('../fonts/icomoon.eot?53z85x');
+	src:url('../fonts/icomoon.eot?#iefix53z85x') format('embedded-opentype'),
+		url('../fonts/icomoon.woff?53z85x') format('woff'),
+		url('f../onts/icomoon.ttf?53z85x') format('truetype'),
+		url('../fonts/icomoon.svg?53z85x#icomoon') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -31,11 +31,19 @@
 h1
 {
     margin: 0;
+    font-size: 64px;
 }
 
-p
+.header p
 {
     margin: 0;
+    font-size: 12px;
+}
+
+.header span
+{
+    color: orange;
+    font-size: 16px;
 }
 
 content
@@ -48,7 +56,12 @@ content
 {
     background-color: #2679a5;
     color: white;
-    padding-left: 30px
+    padding-left: 30px;
+    padding-top: 5px;     
+}
+
+.header h1.icon-tellevo:before {
+	content: "\e609";
 }
 
 .nav
@@ -139,8 +152,18 @@ content
   background: #f5f5f5;
 }
  
-.nav a.icon-location:before {
+.nav a.icon-agregar:before {
 	content: "\e600";
+}
+
+.nav a.icon-favoritos:before 
+{
+	content: "\e603";
+}
+
+.nav a.icon-autos:before 
+{
+	content: "\e601";
 }
 
 .nav1
@@ -182,7 +205,7 @@ content
   text-decoration: none;
   background-color: #f7f7f7;
   color: #b5b5b5;
-  margin: 0px;
+  /*margin: 0px;*/
   width: 60px;
   height: 60px;
   position: relative;
@@ -204,10 +227,38 @@ content
   background: #f5f5f5;
 }
  
-.nav1 a.icon-location:before 
+.nav1 a.icon-fecha:before 
 {
-	content: "\e600";
+	content: "\e604";
 }
+
+.nav1 a.icon-hora:before 
+{
+	content: "\e605";
+}
+
+.nav1 a.icon-autos:before 
+{
+	content: "\e601";
+}
+
+.nav1 a.icon-destino:before 
+{
+	content: "\e602";
+}
+
+.nav1 a.icon-pago:before 
+{
+	content: "\e607";
+}
+
+.nav1 a.icon-servicio:before 
+{
+	content: "\e608";
+}
+
+
+
 
 .nav1 li:first-child
 {
@@ -217,6 +268,24 @@ content
 .nav1 a:first-child
 {
     color: #2679a5;
+}
+
+.indicadorT
+{
+    position: relative;
+    padding-top:-10px;
+    display: block;
+    color: #e2e2e2;
+    width: 70px;
+    text-align: center;
+    line-height: -100px;
+    margin: 0px;
+    top: -35px;
+}
+
+.indicadorT span.icon-indicador:before
+{
+    content: "\e606";
 }
 
 .nav2
