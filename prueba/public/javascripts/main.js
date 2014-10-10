@@ -7,7 +7,7 @@
 */
 function onDocumentReady()
 {
-	console.log("Main Ready! -> 0.2.0");
+	console.log("Main Ready! -> 0.2.7");
     
     /*$("#hora").attr("disable", true);
     
@@ -17,7 +17,7 @@ function onDocumentReady()
         console.log("Falta paso 1");
     }); */
     
-    
+    var servicio_resumen = [];
     
     $("#nav1").hide();
     $("#calendarioApp").hide();       
@@ -26,6 +26,8 @@ function onDocumentReady()
     $("#auto_app").hide();
     $("#destino_app").hide();
     $("#pago_app").hide();
+    $("#servicio_app").hide();
+    $("#solicitar_servicio_button").hide();
     
     function posicionReferencia(instancia, vx, vy)
     {
@@ -57,6 +59,10 @@ function onDocumentReady()
     
     $(".calendario").on('click', function(e)
     {
+        console.log("Fecha: "+$(this).text());
+        
+        servicio_resumen[0] = $(this).text();
+        
         $("#calendarioApp").hide();
         
         $("#tiempo").show();
@@ -69,7 +75,11 @@ function onDocumentReady()
     
     $(".okButton").on('click', function(e)
     {
-        console.log("Boton OK");
+        
+        hora = $('#hora_selector :selected').text()+":"+$('#minuto_selector :selected').text()+$('#am_pm :selected').text();        
+        console.log("Boton OK - Hora: "+hora);
+        
+        servicio_resumen[1] = hora;
         
         $("#tiempo").hide();
         $("#ok_button").hide();
@@ -83,6 +93,8 @@ function onDocumentReady()
     {
         console.log("Placa: "+$(this).text());
         
+        servicio_resumen[2] = $(this).text();
+        
         $("#auto_app").hide();
         
         $("#destino_app").show();
@@ -95,6 +107,8 @@ function onDocumentReady()
     {
         console.log("Destino: "+$(this).text());
         
+        servicio_resumen[3] = $(this).text();
+        
         $("#destino_app").hide();
         
         $("#pago_app").show();
@@ -103,6 +117,49 @@ function onDocumentReady()
         
     });
     
+    $(".pagoApp").on('click', function(e)
+    {
+        console.log("Tipo de pago: "+$(this).text());
+        
+        servicio_resumen[4] = $(this).text();
+        
+        console.log("Resumen: "+servicio_resumen);
+        
+        $("#pago_app").hide();
+        
+        $("#servicio_app").show();
+        $("#solicitar_servicio_button").show();
+        
+        $.each(servicio_resumen, function(index, value){
+            var lista = $('<li />');
+            
+            switch(index)
+            {
+                case 0:
+                    lista.html("Día: "+value);
+                    break;
+                case 1:
+                    lista.html("Hora: "+value);
+                    break;
+                case 2:
+                    lista.html("Placa: "+value);
+                    break;
+                case 4:
+                    lista.html("Pago: "+value);
+                    break;
+                default:
+                    lista.html(value);
+                    break;                    
+            }
+                        
+            $("#servicio_app").append(lista);
+        });
+        
+                
+        posicionReferencia("#servicio_app", 255, 80);
+        posicionReferencia("#solicitar_servicio_button", 490, 90);
+        
+    });
 }
 
 $(document).on('ready', onDocumentReady);

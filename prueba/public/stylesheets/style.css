@@ -396,7 +396,7 @@ content
 .navPago a:link,
 .navPago a:visited
 {
-   display: block;
+  display: block;
   text-decoration: none;
   background-color: #f7f7f7;
   color: #2679a5;
@@ -426,4 +426,75 @@ content
     text-decoration: none;
     color: #555;
     background: #f5f5f5;
+}
+
+.servicioApp
+{
+    list-style: none;
+    text-align:left;
+    font-size: 24px;
+    background-color: #e2e2e2; 
+    padding: 5px 1px 1px 1px;
+    width: 225px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.servicioApp li
+{
+  display: block;
+  text-decoration: none;
+  background-color: #f7f7f7;
+  color: #2679a5;
+  margin: 0px;
+  /*width: 62.5px;*/
+  height: 40px;
+  position: relative;
+  text-align: left;
+  line-height: 40px;
+  border-radius: 5px;  
+  /*box-shadow: 0px 3px 8px #aaa, inset 0px 2px 3px #fff;*/
+  border: solid 1px transparent;
+  margin: 0 5px 5px 5px;
+}
+
+.solicitarServicioButton
+{
+    list-style: none;
+    text-align:left;
+    font-size: 24px;
+    background-color: #e2e2e2; 
+    padding: 5px 1px 1px 1px;
+    width: 225px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.solicitarServicioButton a:link, 
+.solicitarServicioButton a:visited
+{
+    display: block;
+  text-decoration: none;
+  background-color: #f7f7f7;
+  color: #e0950b;
+  margin: 0px;
+  /*width: 62.5px;*/
+  height: 60px;
+  position: relative;
+  text-align: center;
+  line-height: 60px;
+  border-radius: 5px;  
+  /*box-shadow: 0px 3px 8px #aaa, inset 0px 2px 3px #fff;*/
+  border: solid 1px transparent;
+  margin: 0 5px 5px 5px;
+}
+
+.solicitarServicioButton a:active {
+  box-shadow: 0px 3px 4px #aaa inset, 0px 2px 3px #fff;
+}
+
+.solicitarServicioButton a:hover {
+  text-decoration: none;
+  color: #555;
+  background: #f5f5f5;
 }
