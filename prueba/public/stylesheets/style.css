@@ -34,18 +34,6 @@ h1
     font-size: 64px;
 }
 
-.header p
-{
-    margin: 0;
-    font-size: 12px;
-}
-
-.header span
-{
-    color: orange;
-    font-size: 16px;
-}
-
 content
 {
     position: absolute;
@@ -56,12 +44,31 @@ content
 {
     background-color: #2679a5;
     color: white;
-    padding-left: 30px;
-    padding-top: 5px;     
+    padding-left: 5px;
+    padding-top: 5px;
+    position: relative; 
+    height: 65px;
 }
 
 .header h1.icon-tellevo:before {
 	content: "\e609";
+}
+
+.header p
+{
+    margin: 0;
+    font-size: 12px;
+    display: block;
+    position: relative;
+    top:-16px;
+    padding-left:110px;
+    line-height: 12px;
+}
+
+.header span
+{
+    color: orange;
+    font-size: 16px;
 }
 
 .nav
@@ -528,6 +535,45 @@ content
 }
 
 .solicitarServicioButton
+{
+    list-style: none;
+    text-align:left;
+    font-size: 24px;
+    background-color: #e2e2e2; 
+    padding: 5px 1px 1px 1px;
+    width: 225px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.solicitarServicioButton a:link, 
+.solicitarServicioButton a:visited
+{
+    display: block;
+  text-decoration: none;
+  background-color: #f7f7f7;
+  color: #e0950b;
+  margin: 0px;
+  /*width: 62.5px;*/
+  height: 60px;
+  position: relative;
+  text-align: center;
+  line-height: 60px;
+  border-radius: 5px;  
+  /*box-shadow: 0px 3px 8px #aaa, inset 0px 2px 3px #fff;*/
+  border: solid 1px transparent;
+  margin: 0 5px 5px 5px;
+}
+
+.solicitarServicioButton a:active {
+  box-shadow: 0px 3px 4px #aaa inset, 0px 2px 3px #fff;
+}
+
+.solicitarServicioButton a:hover {
+  text-decoration: none;
+  color: #555;
+  background: #f5f5f5;
+}rvicioButton
 {
     list-style: none;
     text-align:left;
